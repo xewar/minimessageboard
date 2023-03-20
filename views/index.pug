@@ -1,0 +1,14 @@
+
+extends layout
+
+block content
+  header
+    h1= title
+    p Welcome to #{title}
+  main
+  div(class='messageContainer')
+      each message in messages
+        div(class = 'messageBubble')
+          p= message.text
+          p= message.user
+          p= message.added

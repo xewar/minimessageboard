@@ -1,0 +1,22 @@
+@import "/path/to/reset-css/reset.css";
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-color: #FFACAC; */
+}
+h1 {
+}
+.messageContainer {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+  height: 60vh;
+  flex-direction: column;
+}
+.messageBubble {
+  background-color: white;
+  border: 1em solid #fbffb1;
+  border-radius: 15%;
+  min-width: 60vw;
+  max-width: 80vw;
+}
