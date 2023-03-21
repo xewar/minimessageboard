@@ -3,12 +3,22 @@ extends layout
 
 block content
   header
-    h1= title
-    p Welcome to #{title}
+    h1= `a message board of poetry`
+    p Welcome, bienvenides. Please share a poem.
   main
+  div(class='leftsidebar')
   div(class='messageContainer')
       each message in messages
         div(class = 'messageBubble')
-          p= message.text
-          p= message.user
-          p= message.added
+          div= message.title
+          div= message.text
+          div= `${message.author}   ${message.added}`
+  div(class='newSubmission')
+    div Add a comment
+      <form action="/new" method="post">
+      input(type="text", name="title")
+      input(type="text", name="author",placeholder="your name")
+      input(type="text", name="messageText" placeholder='your message')
+      button(type="submit") Submit
+    </form>
+

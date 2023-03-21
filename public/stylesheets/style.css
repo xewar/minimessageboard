@@ -1,16 +1,16 @@
-@import "/path/to/reset-css/reset.css";
+@import "./resets/normalize.css";
+@import url("https://use.typekit.net/hqa2fhk.css");
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /* background-color: #FFACAC; */
+  font-family: "sweet-sans-pro", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
-h1 {
-}
+
 .messageContainer {
   display: flex;
   gap: 2em;
   justify-content: space-between;
-  height: 60vh;
   flex-direction: column;
 }
 .messageBubble {
