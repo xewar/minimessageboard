@@ -1,5 +1,5 @@
 <a href="https://minimessageboard-production-86be.up.railway.app/">
-<img src="https://github.com/xewar/projectThumbnails/blob/b2232af88f6aaa3c1c14d7c0b698be0f41bb2732/minimessageboard.png" width="800"></a>
+<img src="https://github.com/xewar/projectThumbnails/blob/b2232af88f6aaa3c1c14d7c0b698be0f41bb2732/minimessageboard.png" width="500"></a>
 
 an anonymous message board for sharing poems. i made this project to practice using express.
 
