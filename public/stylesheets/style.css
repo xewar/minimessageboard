@@ -1,22 +1,113 @@
 @import "./resets/normalize.css";
 @import url("https://use.typekit.net/hqa2fhk.css");
-
+:root {
+  --sidebar: rgba(255, 92, 121, 0.4);
+  --hot_pink: rgba(255, 72, 176, 0.45);
+  --blended: rgba(255, 72, 176, 0.2);
+  --red: rgba(255, 102, 94, 0.4);
+  --highlight: rgba(255, 87, 135, 0.3);
+  --flo_yellow: rgba(247, 255, 0, 0.5);
+  --text: rgb(67, 80, 96);
+}
 body {
   font-family: "sweet-sans-pro", sans-serif;
   font-weight: 200;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  width: 11gi0vw;
 }
-
+header {
+  background-color: var(--red);
+}
+h1 {
+  padding: 0.3em 1em;
+  font-size: 2em;
+  font-weight: 500;
+}
+main {
+  border-top: 1em solid var(--flo_yellow);
+}
+.right {
+  border-left: 1em solid var(--flo_yellow);
+}
+main {
+  display: flex;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--sidebar);
+}
+.newSubmission {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-right: 4vw;
+  padding-left: 1em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+input,
+textarea,
+button {
+  /* outline: none; */
+  border: none;
+  padding: 0.5em;
+  border-left: 0.5em solid var(--hot_pink);
+  border-right: 0.5em solid var(--flo_yellow);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+.instructions {
+  padding: 0.5em;
+  padding-left: 1em;
+}
+.formBottom {
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-between;
+  flex: 1;
+}
+button {
+  background-color: white;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .messageContainer {
   display: flex;
   gap: 2em;
   justify-content: space-between;
   flex-direction: column;
+  flex-wrap: wrap;
+  padding: 3em;
+  padding-right: 6em;
+  background-color: var(--highlight);
+  height: 100vh;
+}
+.topRight {
+  height: 3em;
+  background-color: var(--blended);
 }
 .messageBubble {
   background-color: white;
-  border: 1em solid #fbffb1;
-  border-radius: 15%;
-  min-width: 60vw;
-  max-width: 80vw;
+  min-width: 30vw;
+  max-width: max-content;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1em; */
+}
+.poemText {
+  padding-bottom: 1em;
 }

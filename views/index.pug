@@ -3,22 +3,25 @@ extends layout
 
 block content
   header
-    h1= `a message board of poetry`
-    p Welcome, bienvenides. Please share a poem.
+    h1= `poetry message board`
   main
-  div(class='leftsidebar')
-  div(class='messageContainer')
-      each message in messages
-        div(class = 'messageBubble')
-          div= message.title
-          div= message.text
-          div= `${message.author}   ${message.added}`
-  div(class='newSubmission')
-    div Add a comment
-      <form action="/new" method="post">
-      input(type="text", name="title")
-      input(type="text", name="author",placeholder="your name")
-      input(type="text", name="messageText" placeholder='your message')
-      button(type="submit") Submit
-    </form>
+    div(class='left')
+      div(class='newSubmission')
+          p(class='instructions') Share a poem here.
+          <form action="/new" method="post">
+            input(type="text", name="title", placeholder="poem title")
+            textarea(name="messageText", cols="28", rows="7") 
+            div(class='formBottom')
+              input(type="textarea", name="author",placeholder="author's name, year") 
+              button(type="submit") ♡
+          </form>
+    div(class='right')
+      div(class='topRight')
+      div(class='messageContainer')
+          each message in messages
+            div(class = 'messageBubble')
+              div= message.title
+              div(style='white-space:pre;' class='poemText')= message.text
+              div= `${message.author}`
+    
 
