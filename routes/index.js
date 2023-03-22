@@ -71,7 +71,7 @@ Have lasted all this while.`,
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Mini Messageboard", messages: messages });
+  res.render("index", { title: "shared poems", messages: messages });
 });
 router.post("/new", function (req, res, next) {
   let { messageText: messageText, author: author, title: title } = req.body;
